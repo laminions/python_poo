@@ -80,4 +80,97 @@ if __name__ == main():
     main()
 ```
 
+## composicion
 
+- consiste en la creacion de nuevas clases a partir de otras clases existentes q actuen como elementos compositorios de la nueva.
+- las clases existenten seran atributos de la nueva clase.
+
+## ejemplos 
+
+- un cordenada en dos dimensiones esta compuesta por dos valores, el valor entre las x y el valor de la y. esto podria ser una clase.
+- un cuadrado esta compuesto por 4 cordenadas que son los cuarto vertices. esto podria seruna clase que esta compuesta por cuatro clases del objeto coordenada 
+
+### codigo python
+```python 
+class cordenada :
+    # metodo constructor 
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+        def mostrarcordenada(self):
+            print("(",self.x,",",self.y, ")")
+
+class cuadrado :
+    # metodo constructor
+    def __init__(self, v1, v2, v3, v4):
+        self.v1 = v1
+        self.v2 = v2
+        self.v3 = v3
+        self.v4 = v4
+
+        def mostrarvertices(self):
+            print("el cuadrado esta compuesto por los siguientes vertices:")
+            self.v1.mostrarcordenada()
+            self.v2.mostrarcordenada()
+            self.v3.mostrarcordenada()
+            self.v4.mostrarcordenada()
+```
+
+## representacion de RAM de la composicion
+
+![SAPA](img//sapa.jpeg)
+
+## encapsulacion
+
+- uno de los objetivos que tiene POO es proteger los datos de acceso no controlados, y esto es loo que se conoce como **encapslacion**.
+- los datos (atributos) que componen una clase pueden ser de dos tipos:
+       - **publicos:** los datos son accesibles sin control y para acceder a ellos. de manera, los datos unicamente seran accedidos directamente por la propia clase.
+- la encapsulacion tambien puede realizarse sobre los metodos.
+- la definicion de atributos privados se realiza incluyendo los caracteres "__" (dos guiones de piso) entre la palabra *self* y el nombre del atributo.
+
+## ejemplo 
+
+### codigo python
+```python 
+class cordenada :
+    # metodo constructor 
+    def __init__(self, x, y):
+        self.__x = x
+        self.__y = y
+
+        # metodo de acceso
+        def getX(self):
+            return self.__X
+
+        def setX(self, X):
+            self.__X = X
+
+        def getX(self):
+            return self.__Y
+
+        def sety(self, y):
+            self.__y = y
+
+        # metodo para mostrar la cordenda 
+        def mostrarcordenada(self)
+        print("(",self.__x,",",self.__y, ")")
+
+        def mostrarcordenada(self):
+            print("(",self.x,",",self.y, ")")
+
+class cuadrado :
+    # metodo constructor
+    def __init__(self, v1, v2, v3, v4):
+        self.v1 = v1
+        self.v2 = v2
+        self.v3 = v3
+        self.v4 = v4
+
+        def mostrarvertices(self):
+            print("el cuadrado esta compuesto por los siguientes vertices:")
+            self.v1.mostrarcordenada()
+            self.v2.mostrarcordenada()
+            self.v3.mostrarcordenada()
+            self.v4.mostrarcordenada()
+```
