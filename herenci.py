@@ -31,7 +31,7 @@ class persona:
         print("Apellidos: " + self.__Apellidos)
         print("Edad: " + str(self.__Edad))
 
-class Alumno(Persona):
+class Alumno(persona):
     def __init__(self):
         self.__Curso = ""
         self.__Asignaturas = ""
@@ -56,18 +56,28 @@ class Alumno(Persona):
         print("\tCurso: ", self.__Curso)
         print("\tMatrículas: ", self.__Asignaturas)
 
-class Profesor(Persona):
+class Profesor(persona):
     pass
 
 # metodo principal
 def main():
+## alumno
     alumno = Alumno()
-    alumno.setNombre("Néstor")
-    alumno.setApellidos("Páez Sarmiento")
-    alumno.setEdad(25)
+    alumno.setNombre("heidy vanesa")
+    alumno.setApellidos("acosta")
+    alumno.setEdad(15)
     alumno.setCurso("Bachillerato")
-    alumno.setAsignaturas(["Matemáticas", "Tecnología", "Inglés"])
+    alumno.setAsignaturas([ "Tecnología"])
     alumno.mostrarAlumno()
+## profesor
+def main():
+    Profesor = Profesor()
+    Profesor.setNombre("neztor")
+    Profesor.setApellidos("paez")
+    Profesor.setEdad(25)
+    Profesor.setCurso("Bachillerato")
+    Profesor.setAsignaturas([ "Tecnología", "matematica", "ingles"])
+    Profesor.mostrarprofesor()
 
 if __name__ == "__main__":
     main()
